@@ -11,6 +11,7 @@ jobs:
       - name: Checkout COVID-19 data
         uses: actions/checkout@v2
         with:
+          repository: CSSEGISandData/COVID-19
           path: data
       - name: Do conversion
         uses: actions/setup-node@v1
