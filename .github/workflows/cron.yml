@@ -1,0 +1,29 @@
+on:
+  schedule:
+    - cron: "0 */3 * * *"
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Checkout COVID-19 data
+        uses: actions/checkout@v2
+        with:
+          path: data
+      - name: Do conversion
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: node src/index.js
+      - name: Add files to git
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git diff-index --quiet HEAD || git commit -m "chore(action): Bump data" -a
+      - name: Push to GitHub
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,16 @@
+{
+  "name": "covid19-json",
+  "version": "1.0.0",
+  "description": "A repo that contains csv from https://github.com/CSSEGISandData/COVID-19 parsed to JSON",
+  "main": "index.js",
+  "scripts": {
+    "get-data": "rm -rf data && git clone https://github.com/CSSEGISandData/COVID-19.git data"
+  },
+  "repository": "https://github.com/dbmedialab/covid19-json",
+  "author": "Fredrik Pettersen <fredrik.fumler@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "csv-parse": "^4.8.8"
+  }
+}
