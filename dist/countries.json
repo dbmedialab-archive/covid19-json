@@ -714,5 +714,9 @@
   "Zimbabwe": {
     "code": "ZW",
     "translation": "Zimbabwe"
+  },
+  "Unknown": {
+    "code": "N/A",
+    "translation": "Ukjent"
   }
 }

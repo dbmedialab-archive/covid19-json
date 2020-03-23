@@ -67,6 +67,29 @@ async function getSingleJSON(fileName) {
   return [result, dates];
 }
 
+function mergeTimeseries(oldSeries = [], newSeries = []) {
+  if (oldSeries.length > 0) {
+    return oldSeries.reduce((prev, curr, i) => {
+      return [
+        ...prev,
+        {
+          ...curr,
+          confirmed:
+            (curr.confirmed || 0) +
+            ((newSeries[i] && newSeries[i].confirmed) || 0),
+          deaths:
+            (curr.deaths || 0) + ((newSeries[i] && newSeries[i].deaths) || 0),
+          recovered:
+            (curr.recovered || 0) +
+            ((newSeries[i] && newSeries[i].recovered) || 0)
+        }
+      ];
+    }, []);
+  }
+
+  return newSeries;
+}
+
 async function getTimeseriesJSON() {
   const [[confirmed, dates], [deaths], [recovered]] = await Promise.all(
     fileNames.map(fileName => getSingleJSON(fileName))
@@ -87,43 +110,24 @@ async function getTimeseriesJSON() {
       ];
     }, []);
 
-    return {
-      ...prev,
-      [countries[country].code]: {
-        name: countries[country].translation,
-        lat: confirmed[country].lat,
-        long: confirmed[country].long,
-        jhuName: country,
-        timeseries
-      }
-    };
-  }, {});
-
-  return result;
-}
-
-async function getTotalsJSON() {
-  const [[confirmed, dates], [deaths], [recovered]] = await Promise.all(
-    fileNames.map(fileName => getSingleJSON(fileName))
-  );
-
-  const result = Object.keys(confirmed).reduce((prev, country, i) => {
-    const totals = dates.reduce((prevTotal, date) => {
-      return {
-        confirmed: confirmed[country][date],
-        deaths: deaths[country][date],
-        recovered: recovered[country][date]
-      };
-    }, {});
+    let useCountry = country;
+    if (!countries[country]) {
+      useCountry = "Unknown";
+    }
 
     return {
       ...prev,
-      [countries[country].code]: {
-        name: countries[country].translation,
+      [countries[useCountry].code]: {
+        name: countries[useCountry].translation,
         lat: confirmed[country].lat,
         long: confirmed[country].long,
-        jhuName: country,
-        totals
+        jhuName: useCountry,
+        timeseries: mergeTimeseries(
+          (prev[countries[useCountry].code] &&
+            prev[countries[useCountry].code].timeseries) ||
+            [],
+          timeseries
+        )
       }
     };
   }, {});
@@ -133,7 +137,6 @@ async function getTotalsJSON() {
 
 async function writeJSON() {
   const dataTimeseries = await getTimeseriesJSON();
-  const dataTotals = await getTotalsJSON();
 
   const outputPathTimeseriesPretty = path.join(
     WORKING_DIR,
@@ -154,23 +157,6 @@ async function writeJSON() {
     outputPathTimeseriesMinified,
     JSON.stringify(dataTimeseries)
   );
-
-  const outputPathTotalsPretty = path.join(
-    WORKING_DIR,
-    "dist",
-    "totals-pretty.json"
-  );
-  const outputPathTotalsMinified = path.join(
-    WORKING_DIR,
-    "dist",
-    "totals.json"
-  );
-
-  await fs.writeFile(
-    outputPathTotalsPretty,
-    JSON.stringify(dataTotals, null, 2)
-  );
-  await fs.writeFile(outputPathTotalsMinified, JSON.stringify(dataTotals));
 }
 
 writeJSON();

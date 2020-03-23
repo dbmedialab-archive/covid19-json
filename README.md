@@ -4,23 +4,7 @@ Turns the CSV data from [John Hopkis CSSE](https://github.com/CSSEGISandData/COV
 
 ## Files
 
-`dist/totals.json` - Summary in the form of
-
-```json
-{
-  "TH": {
-    "name": "Thailand",
-    "lat": "15",
-    "long": "101",
-    "jhuName": "Thailand",
-    "totals": {
-      "confirmed": 411,
-      "deaths": 1,
-      "recovered": 42
-    }
-  }
-}
-```
+https://raw.githubusercontent.com/dbmedialab/covid19-json/master/dist/timeseries.json
 
 `dist/timeseries.json` - Timeseries data in the form of
 
