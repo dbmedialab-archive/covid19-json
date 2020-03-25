@@ -10,9 +10,8 @@ const parse = util.promisify(parseSync);
 const WORKING_DIR = process.env.GITHUB_WORKSPACE || "./";
 
 const fileNames = [
-  "time_series_19-covid-Confirmed.csv",
-  "time_series_19-covid-Deaths.csv",
-  "time_series_19-covid-Recovered.csv"
+  "time_series_covid19_confirmed_global.csv",
+  "time_series_covid19_deaths_global.csv"
 ];
 
 async function getSingleJSON(fileName) {
@@ -78,10 +77,7 @@ function mergeTimeseries(oldSeries = [], newSeries = []) {
             (curr.confirmed || 0) +
             ((newSeries[i] && newSeries[i].confirmed) || 0),
           deaths:
-            (curr.deaths || 0) + ((newSeries[i] && newSeries[i].deaths) || 0),
-          recovered:
-            (curr.recovered || 0) +
-            ((newSeries[i] && newSeries[i].recovered) || 0)
+            (curr.deaths || 0) + ((newSeries[i] && newSeries[i].deaths) || 0)
         }
       ];
     }, []);
@@ -91,7 +87,7 @@ function mergeTimeseries(oldSeries = [], newSeries = []) {
 }
 
 async function getTimeseriesJSON() {
-  const [[confirmed, dates], [deaths], [recovered]] = await Promise.all(
+  const [[confirmed, dates], [deaths]] = await Promise.all(
     fileNames.map(fileName => getSingleJSON(fileName))
   );
 
@@ -102,10 +98,16 @@ async function getTimeseriesJSON() {
       return [
         ...prevDate,
         {
-          date: `20${year}-${month}-${day}`,
-          confirmed: confirmed[country][date],
-          deaths: deaths[country][date],
-          recovered: recovered[country][date]
+          date: `${year}-${month}-${day}`,
+          confirmed: (confirmed[country] && confirmed[country][date]) || 0,
+          deaths:
+            (deaths[country] &&
+              deaths[country][
+                `${month}/${day}/${
+                  year.length === 4 ? year.substring(2) : year
+                }`
+              ]) ||
+            0
         }
       ];
     }, []);
@@ -136,27 +138,32 @@ async function getTimeseriesJSON() {
 }
 
 async function writeJSON() {
-  const dataTimeseries = await getTimeseriesJSON();
+  try {
+    const dataTimeseries = await getTimeseriesJSON();
 
-  const outputPathTimeseriesPretty = path.join(
-    WORKING_DIR,
-    "dist",
-    "timeseries-pretty.json"
-  );
-  const outputPathTimeseriesMinified = path.join(
-    WORKING_DIR,
-    "dist",
-    "timeseries.json"
-  );
+    const outputPathTimeseriesPretty = path.join(
+      WORKING_DIR,
+      "dist",
+      "timeseries-pretty.json"
+    );
+    const outputPathTimeseriesMinified = path.join(
+      WORKING_DIR,
+      "dist",
+      "timeseries.json"
+    );
 
-  await fs.writeFile(
-    outputPathTimeseriesPretty,
-    JSON.stringify(dataTimeseries, null, 2)
-  );
-  await fs.writeFile(
-    outputPathTimeseriesMinified,
-    JSON.stringify(dataTimeseries)
-  );
+    await fs.writeFile(
+      outputPathTimeseriesPretty,
+      JSON.stringify(dataTimeseries, null, 2)
+    );
+    await fs.writeFile(
+      outputPathTimeseriesMinified,
+      JSON.stringify(dataTimeseries)
+    );
+  } catch (error) {
+    process.exitCode = 1;
+    console.error(error);
+  }
 }
 
 writeJSON();
