@@ -11,7 +11,8 @@ const WORKING_DIR = process.env.GITHUB_WORKSPACE || "./";
 
 const fileNames = [
   "time_series_covid19_confirmed_global.csv",
-  "time_series_covid19_deaths_global.csv"
+  "time_series_covid19_deaths_global.csv",
+  "time_series_covid19_recovered_global.csv"
 ];
 
 async function getSingleJSON(fileName) {
@@ -77,7 +78,10 @@ function mergeTimeseries(oldSeries = [], newSeries = []) {
             (curr.confirmed || 0) +
             ((newSeries[i] && newSeries[i].confirmed) || 0),
           deaths:
-            (curr.deaths || 0) + ((newSeries[i] && newSeries[i].deaths) || 0)
+            (curr.deaths || 0) + ((newSeries[i] && newSeries[i].deaths) || 0),
+          recovered:
+            (curr.recovered || 0) +
+            ((newSeries[i] && newSeries[i].recovered) || 0)
         }
       ];
     }, []);
@@ -87,7 +91,7 @@ function mergeTimeseries(oldSeries = [], newSeries = []) {
 }
 
 async function getTimeseriesJSON() {
-  const [[confirmed, dates], [deaths]] = await Promise.all(
+  const [[confirmed, dates], [deaths], [recovered]] = await Promise.all(
     fileNames.map(fileName => getSingleJSON(fileName))
   );
 
@@ -98,23 +102,26 @@ async function getTimeseriesJSON() {
       return [
         ...prevDate,
         {
-          date: `${year}-${month}-${day}`,
+          date: `20${year}-${month}-${day}`,
           confirmed: (confirmed[country] && confirmed[country][date]) || 0,
-          deaths:
-            (deaths[country] &&
-              deaths[country][
-                `${month}/${day}/${
-                  year.length === 4 ? year.substring(2) : year
-                }`
-              ]) ||
-            0
+          deaths: (deaths[country] && deaths[country][date]) || 0,
+          recovered: (recovered[country] && recovered[country][date]) || 0
         }
       ];
     }, []);
 
     let useCountry = country;
     if (!countries[country]) {
+      console.log(`Missing country ${country}`);
       useCountry = "Unknown";
+    }
+
+    if (countries[useCountry].code === "N/A") {
+      console.log(
+        `${country} listed under N/A. Total confirmed: ${
+          timeseries[timeseries.length - 1].confirmed
+        }`
+      );
     }
 
     return {
