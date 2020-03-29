@@ -67,6 +67,10 @@
     "code": "BE",
     "translation": "Belgia"
   },
+  "Belize": {
+    "code": "BZ",
+    "translation": "Belize"
+  },
   "Bhutan": {
     "code": "BT",
     "translation": "Bhutan"
@@ -94,6 +98,10 @@
   "Burkina Faso": {
     "code": "BF",
     "translation": "Burkina Faso"
+  },
+  "Burma": {
+    "code": "MM",
+    "translation": "Myanmar"
   },
   "Cabo Verde": {
     "code": "CV",
@@ -159,6 +167,14 @@
     "code": "N/A",
     "translation": "Cruiseskip"
   },
+  "Diamond Princess": {
+    "code": "N/A",
+    "translation": "Cruiseskip"
+  },
+  "MS Zaandam": {
+    "code": "N/A",
+    "translation": "Cruiseskip"
+  },
   "Cuba": {
     "code": "CU",
     "translation": "Cuba"
@@ -179,11 +195,19 @@
     "code": "DJ",
     "translation": "Republikken Djibouti"
   },
+  "Dominica": {
+    "code": "DM",
+    "translation": "Dominica"
+  },
   "Dominican Republic": {
     "code": "DO",
     "translation": "Den dominikanske republikk"
   },
   "East Timor": {
+    "code": "TL",
+    "translation": "Øst-Timor"
+  },
+  "Timor-Leste": {
     "code": "TL",
     "translation": "Øst-Timor"
   },
@@ -243,6 +267,10 @@
     "code": "GA",
     "translation": "Gabon"
   },
+  "Gambia": {
+    "code": "GM",
+    "translation": "Gambia"
+  },
   "Gambia, The": {
     "code": "GM",
     "translation": "Gambia"
@@ -275,6 +303,10 @@
     "code": "GL",
     "translation": "Grønland"
   },
+  "Grenada": {
+    "code": "GD",
+    "translation": "Grenada"
+  },
   "Guatemala": {
     "code": "GT",
     "translation": "Guatemala"
@@ -282,6 +314,10 @@
   "Guinea": {
     "code": "GN",
     "translation": "Guinea"
+  },
+  "Guinea-Bissau": {
+    "code": "GW",
+    "translation": "Guinea-Bissau"
   },
   "Hong Kong": {
     "code": "HK",
@@ -335,6 +371,10 @@
     "code": "IL",
     "translation": "Israel"
   },
+  "West Bank and Gaza": {
+    "code": "IL",
+    "translation": "Israel"
+  },
   "Italy": {
     "code": "IT",
     "translation": "Italia"
@@ -379,6 +419,10 @@
     "code": "KG",
     "translation": "Kirgisistan"
   },
+  "Laos": {
+    "code": "LA",
+    "translation": "Laos"
+  },
   "Latvia": {
     "code": "LV",
     "translation": "Latvia"
@@ -390,6 +434,10 @@
   "Liberia": {
     "code": "LR",
     "translation": "Liberia"
+  },
+  "Libya": {
+    "code": "LY",
+    "translation": "Libya"
   },
   "Liechtenstein": {
     "code": "LI",
@@ -418,6 +466,10 @@
   "Maldives": {
     "code": "MV",
     "translation": "Maldivene"
+  },
+  "Mali": {
+    "code": "ML",
+    "translation": "Mali"
   },
   "Malta": {
     "code": "MT",
@@ -458,6 +510,10 @@
   "Mongolia": {
     "code": "MN",
     "translation": "Mongolia"
+  },
+  "Mozambique": {
+    "code": "MZ",
+    "translation": "Mosambik"
   },
   "Namibia": {
     "code": "NA",
@@ -555,6 +611,10 @@
     "code": "BL",
     "translation": "Saint Barthélemy"
   },
+  "Saint Kitts and Nevis": {
+    "code": "KN",
+    "translation": "Saint Kitts og Nevis"
+  },
   "Saint Lucia": {
     "code": "LC",
     "translation": "Saint Lucia"
@@ -631,6 +691,10 @@
     "code": "CH",
     "translation": "Sveits"
   },
+  "Syria": {
+    "code": "SY",
+    "translation": "Syria"
+  },
   "Taiwan*": {
     "code": "TW",
     "translation": "Taiwan"
@@ -642,6 +706,10 @@
   "Thailand": {
     "code": "TH",
     "translation": "Thailand"
+  },
+  "Bahamas": {
+    "code": "BS",
+    "translation": "Bahamas"
   },
   "The Bahamas": {
     "code": "BS",
