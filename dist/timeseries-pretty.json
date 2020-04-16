@@ -30472,7 +30472,7 @@
       {
         "date": "2020-4-1",
         "confirmed": 57749,
-        "deaths": 4043,
+        "deaths": 4414,
         "recovered": 11053
       },
       {
@@ -82217,13 +82217,13 @@
       },
       {
         "date": "2020-3-23",
-        "confirmed": 43847,
+        "confirmed": 43843,
         "deaths": 557,
         "recovered": 178
       },
       {
         "date": "2020-3-24",
-        "confirmed": 53740,
+        "confirmed": 53736,
         "deaths": 706,
         "recovered": 348
       },
