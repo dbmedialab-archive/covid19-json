@@ -1,8 +1,8 @@
 {
   "AF": {
     "name": "Afghanistan",
-    "lat": "33.0",
-    "long": "65.0",
+    "lat": "33",
+    "long": "65",
     "jhuName": "Afghanistan",
     "timeseries": [
       {
@@ -10306,7 +10306,7 @@
   "BE": {
     "name": "Belgia",
     "lat": "50.8333",
-    "long": "4.0",
+    "long": "4",
     "jhuName": "Belgium",
     "timeseries": [
       {
@@ -12825,9 +12825,9 @@
       },
       {
         "date": "2020-4-28",
-        "confirmed": 1014,
-        "deaths": 53,
-        "recovered": 98
+        "confirmed": 1053,
+        "deaths": 55,
+        "recovered": 110
       },
       {
         "date": "2020-4-29",
@@ -12837,9 +12837,9 @@
       },
       {
         "date": "2020-4-30",
-        "confirmed": 1110,
-        "deaths": 59,
-        "recovered": 117
+        "confirmed": 1167,
+        "deaths": 62,
+        "recovered": 132
       },
       {
         "date": "2020-5-1",
@@ -12849,9 +12849,9 @@
       },
       {
         "date": "2020-5-2",
-        "confirmed": 1229,
-        "deaths": 66,
-        "recovered": 134
+        "confirmed": 1470,
+        "deaths": 71,
+        "recovered": 159
       },
       {
         "date": "2020-5-3",
@@ -17389,7 +17389,7 @@
   },
   "CM": {
     "name": "Kamerun",
-    "lat": "3.8480000000000003",
+    "lat": "3.848",
     "long": "11.5021",
     "jhuName": "Cameroon",
     "timeseries": [
@@ -18034,7 +18034,7 @@
   "CA": {
     "name": "Canada",
     "lat": "64.2823",
-    "long": "-135.0",
+    "long": "-135",
     "jhuName": "Canada",
     "timeseries": [
       {
@@ -25761,8 +25761,8 @@
   },
   "CU": {
     "name": "Cuba",
-    "lat": "22.0",
-    "long": "-80.0",
+    "lat": "22",
+    "long": "-80",
     "jhuName": "Cuba",
     "timeseries": [
       {
@@ -27050,7 +27050,7 @@
   "CZ": {
     "name": "Tsjekkia",
     "lat": "49.8175",
-    "long": "15.472999999999999",
+    "long": "15.473",
     "jhuName": "Czechia",
     "timeseries": [
       {
@@ -31557,8 +31557,8 @@
   },
   "EG": {
     "name": "Egypt",
-    "lat": "26.0",
-    "long": "30.0",
+    "lat": "26",
+    "long": "30",
     "jhuName": "Egypt",
     "timeseries": [
       {
@@ -32846,7 +32846,7 @@
   "GQ": {
     "name": "Republikken Ekvatorial-Guinea",
     "lat": "1.5",
-    "long": "10.0",
+    "long": "10",
     "jhuName": "Equatorial Guinea",
     "timeseries": [
       {
@@ -36709,8 +36709,8 @@
   },
   "FI": {
     "name": "Finland",
-    "lat": "64.0",
-    "long": "26.0",
+    "lat": "64",
+    "long": "26",
     "jhuName": "Finland",
     "timeseries": [
       {
@@ -39929,8 +39929,8 @@
   },
   "DE": {
     "name": "Tyskland",
-    "lat": "51.0",
-    "long": "9.0",
+    "lat": "51",
+    "long": "9",
     "jhuName": "Germany",
     "timeseries": [
       {
@@ -43149,7 +43149,7 @@
   },
   "GY": {
     "name": "Guyana",
-    "lat": "5.0",
+    "lat": "5",
     "long": "-58.75",
     "jhuName": "Guyana",
     "timeseries": [
@@ -47013,8 +47013,8 @@
   },
   "IN": {
     "name": "India",
-    "lat": "21.0",
-    "long": "78.0",
+    "lat": "21",
+    "long": "78",
     "jhuName": "India",
     "timeseries": [
       {
@@ -48301,8 +48301,8 @@
   },
   "IR": {
     "name": "Iran",
-    "lat": "32.0",
-    "long": "53.0",
+    "lat": "32",
+    "long": "53",
     "jhuName": "Iran",
     "timeseries": [
       {
@@ -48945,8 +48945,8 @@
   },
   "IQ": {
     "name": "Irak",
-    "lat": "33.0",
-    "long": "44.0",
+    "lat": "33",
+    "long": "44",
     "jhuName": "Iraq",
     "timeseries": [
       {
@@ -50725,87 +50725,87 @@
       },
       {
         "date": "2020-4-12",
-        "confirmed": 11435,
+        "confirmed": 11416,
         "deaths": 105,
         "recovered": 1685
       },
       {
         "date": "2020-4-13",
-        "confirmed": 11894,
+        "confirmed": 11859,
         "deaths": 118,
         "recovered": 1913
       },
       {
         "date": "2020-4-14",
-        "confirmed": 12354,
+        "confirmed": 12330,
         "deaths": 125,
         "recovered": 2257
       },
       {
         "date": "2020-4-15",
-        "confirmed": 12875,
+        "confirmed": 12792,
         "deaths": 132,
         "recovered": 2626
       },
       {
         "date": "2020-4-16",
-        "confirmed": 13132,
+        "confirmed": 13052,
         "deaths": 144,
         "recovered": 2881
       },
       {
         "date": "2020-4-17",
-        "confirmed": 13384,
+        "confirmed": 13289,
         "deaths": 153,
         "recovered": 3195
       },
       {
         "date": "2020-4-18",
-        "confirmed": 13683,
+        "confirmed": 13578,
         "deaths": 166,
         "recovered": 3525
       },
       {
         "date": "2020-4-19",
-        "confirmed": 13928,
-        "deaths": 175,
+        "confirmed": 13810,
+        "deaths": 174,
         "recovered": 3825
       },
       {
         "date": "2020-4-20",
-        "confirmed": 14162,
-        "deaths": 180,
+        "confirmed": 14042,
+        "deaths": 179,
         "recovered": 4120
       },
       {
         "date": "2020-4-21",
-        "confirmed": 14408,
-        "deaths": 188,
+        "confirmed": 14271,
+        "deaths": 186,
         "recovered": 4578
       },
       {
         "date": "2020-4-22",
-        "confirmed": 14972,
-        "deaths": 193,
+        "confirmed": 14833,
+        "deaths": 191,
         "recovered": 5286
       },
       {
         "date": "2020-4-23",
-        "confirmed": 15283,
-        "deaths": 196,
-        "recovered": 5703
+        "confirmed": 15139,
+        "deaths": 194,
+        "recovered": 5685
       },
       {
         "date": "2020-4-24",
-        "confirmed": 15542,
-        "deaths": 198,
-        "recovered": 6095
+        "confirmed": 15398,
+        "deaths": 196,
+        "recovered": 6084
       },
       {
         "date": "2020-4-25",
         "confirmed": 15640,
         "deaths": 201,
-        "recovered": 6527
+        "recovered": 6518
       },
       {
         "date": "2020-4-26",
@@ -50877,8 +50877,8 @@
   },
   "IT": {
     "name": "Italia",
-    "lat": "43.0",
-    "long": "12.0",
+    "lat": "43",
+    "long": "12",
     "jhuName": "Italy",
     "timeseries": [
       {
@@ -52165,8 +52165,8 @@
   },
   "JP": {
     "name": "Japan",
-    "lat": "36.0",
-    "long": "138.0",
+    "lat": "36",
+    "long": "138",
     "jhuName": "Japan",
     "timeseries": [
       {
@@ -54741,8 +54741,8 @@
   },
   "KR": {
     "name": "Sør Korea",
-    "lat": "36.0",
-    "long": "128.0",
+    "lat": "36",
+    "long": "128",
     "jhuName": "Korea, South",
     "timeseries": [
       {
@@ -74061,8 +74061,8 @@
   },
   "OM": {
     "name": "Oman",
-    "lat": "21.0",
-    "long": "57.0",
+    "lat": "21",
+    "long": "57",
     "jhuName": "Oman",
     "timeseries": [
       {
@@ -77925,8 +77925,8 @@
   },
   "PH": {
     "name": "Filippinene",
-    "lat": "13.0",
-    "long": "122.0",
+    "lat": "13",
+    "long": "122",
     "jhuName": "Philippines",
     "timeseries": [
       {
@@ -81145,8 +81145,8 @@
   },
   "RU": {
     "name": "Russland",
-    "lat": "60.0",
-    "long": "90.0",
+    "lat": "60",
+    "long": "90",
     "jhuName": "Russia",
     "timeseries": [
       {
@@ -84365,8 +84365,8 @@
   },
   "SA": {
     "name": "Saudi-Arabia",
-    "lat": "24.0",
-    "long": "45.0",
+    "lat": "24",
+    "long": "45",
     "jhuName": "Saudi Arabia",
     "timeseries": [
       {
@@ -90161,8 +90161,8 @@
   },
   "ES": {
     "name": "Spania",
-    "lat": "40.0",
-    "long": "-4.0",
+    "lat": "40",
+    "long": "-4",
     "jhuName": "Spain",
     "timeseries": [
       {
@@ -90805,8 +90805,8 @@
   },
   "LK": {
     "name": "Sri Lanka",
-    "lat": "7.0",
-    "long": "81.0",
+    "lat": "7",
+    "long": "81",
     "jhuName": "Sri Lanka",
     "timeseries": [
       {
@@ -92737,8 +92737,8 @@
   },
   "SE": {
     "name": "Sverige",
-    "lat": "63.0",
-    "long": "16.0",
+    "lat": "63",
+    "long": "16",
     "jhuName": "Sweden",
     "timeseries": [
       {
@@ -94026,7 +94026,7 @@
   "TW": {
     "name": "Taiwan",
     "lat": "23.7",
-    "long": "121.0",
+    "long": "121",
     "jhuName": "Taiwan*",
     "timeseries": [
       {
@@ -95313,8 +95313,8 @@
   },
   "TH": {
     "name": "Thailand",
-    "lat": "15.0",
-    "long": "101.0",
+    "lat": "15",
+    "long": "101",
     "jhuName": "Thailand",
     "timeseries": [
       {
@@ -97245,8 +97245,8 @@
   },
   "TN": {
     "name": "Tunisia",
-    "lat": "34.0",
-    "long": "9.0",
+    "lat": "34",
+    "long": "9",
     "jhuName": "Tunisia",
     "timeseries": [
       {
@@ -98533,8 +98533,8 @@
   },
   "UG": {
     "name": "Uganda",
-    "lat": "1.0",
-    "long": "32.0",
+    "lat": "1",
+    "long": "32",
     "jhuName": "Uganda",
     "timeseries": [
       {
@@ -99821,8 +99821,8 @@
   },
   "AE": {
     "name": "De Forente Arabiske Emirater",
-    "lat": "24.0",
-    "long": "54.0",
+    "lat": "24",
+    "long": "54",
     "jhuName": "United Arab Emirates",
     "timeseries": [
       {
@@ -103685,8 +103685,8 @@
   },
   "VN": {
     "name": "Vietnam",
-    "lat": "16.0",
-    "long": "108.0",
+    "lat": "16",
+    "long": "108",
     "jhuName": "Vietnam",
     "timeseries": [
       {
@@ -104973,8 +104973,8 @@
   },
   "ZW": {
     "name": "Zimbabwe",
-    "lat": "-20.0",
-    "long": "30.0",
+    "lat": "-20",
+    "long": "30",
     "jhuName": "Zimbabwe",
     "timeseries": [
       {
@@ -106262,7 +106262,7 @@
   "GD": {
     "name": "Grenada",
     "lat": "12.1165",
-    "long": "-61.678999999999995",
+    "long": "-61.679",
     "jhuName": "Grenada",
     "timeseries": [
       {
@@ -107550,7 +107550,7 @@
   "SY": {
     "name": "Syria",
     "lat": "34.802075",
-    "long": "38.99681500000001",
+    "long": "38.996815",
     "jhuName": "Syria",
     "timeseries": [
       {
@@ -109481,7 +109481,7 @@
   },
   "LA": {
     "name": "Laos",
-    "lat": "19.856270000000002",
+    "lat": "19.85627",
     "long": "102.495496",
     "jhuName": "Laos",
     "timeseries": [
@@ -111414,7 +111414,7 @@
   "ML": {
     "name": "Mali",
     "lat": "17.570692",
-    "long": "-3.996166000000001",
+    "long": "-3.996166",
     "jhuName": "Mali",
     "timeseries": [
       {
