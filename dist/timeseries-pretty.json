@@ -102602,7 +102602,7 @@
       {
         "date": "2020-6-9",
         "confirmed": 203736,
-        "deaths": 203736,
+        "deaths": 5738,
         "recovered": 92929
       }
     ]
@@ -134801,32 +134801,32 @@
       },
       {
         "date": "2020-6-5",
-        "confirmed": 1897380,
-        "deaths": 109118,
+        "confirmed": 1902632,
+        "deaths": 109359,
         "recovered": 491706
       },
       {
         "date": "2020-6-6",
-        "confirmed": 1920061,
-        "deaths": 109787,
+        "confirmed": 1925765,
+        "deaths": 110068,
         "recovered": 500849
       },
       {
         "date": "2020-6-7",
-        "confirmed": 1943647,
-        "deaths": 110508,
+        "confirmed": 1943882,
+        "deaths": 110511,
         "recovered": 506367
       },
       {
         "date": "2020-6-8",
-        "confirmed": 1960897,
-        "deaths": 110990,
+        "confirmed": 1961428,
+        "deaths": 111011,
         "recovered": 518522
       },
       {
         "date": "2020-6-9",
-        "confirmed": 1979411,
-        "deaths": 111989,
+        "confirmed": 1973230,
+        "deaths": 111694,
         "recovered": 524855
       }
     ]
