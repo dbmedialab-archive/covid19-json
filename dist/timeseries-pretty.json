@@ -100539,7 +100539,7 @@
       },
       {
         "date": "2020-4-3",
-        "confirmed": 75,
+        "confirmed": 76,
         "deaths": 0,
         "recovered": 0
       },
@@ -101019,13 +101019,13 @@
       },
       {
         "date": "2020-6-22",
-        "confirmed": 83,
+        "confirmed": 82,
         "deaths": 1,
         "recovered": 69
       },
       {
         "date": "2020-6-23",
-        "confirmed": 86,
+        "confirmed": 82,
         "deaths": 2,
         "recovered": 72
       },
