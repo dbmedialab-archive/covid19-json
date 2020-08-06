@@ -186817,14 +186817,14 @@
       },
       {
         "date": "2020-8-4",
-        "confirmed": 307256,
-        "deaths": 46295,
+        "confirmed": 307926,
+        "deaths": 46314,
         "recovered": 1445
       },
       {
         "date": "2020-8-5",
-        "confirmed": 307271,
-        "deaths": 46295,
+        "confirmed": 308832,
+        "deaths": 46449,
         "recovered": 1446
       }
     ]
